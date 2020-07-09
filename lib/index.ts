@@ -4,7 +4,7 @@ export interface TinySubscribe<T> {
   next: (state?: T) => TinySubscribe<T>;
 }
 
-function TinySubject<T>(initState:T) {
+export function Subject<T>(initState:T) {
   const ref = {
     state:initState, 
     events:[] as Function[],
@@ -96,7 +96,7 @@ export default function reactOb<T, A>(
   initState: T,
   actions: A,
 ):UseObser<T, A> {
-  const subject = TinySubject(initState);
+  const subject = Subject(initState);
   type Updater = (s: T) => any;
 
   function use(memo?: (s: T) => any[], autoFn?: Function[]): T {
