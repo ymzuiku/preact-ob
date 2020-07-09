@@ -1,3 +1,7 @@
+export interface TinySubscribe<T> {
+    unsubscribe: () => TinySubscribe<T>;
+    next: (state?: T) => TinySubscribe<T>;
+}
 export interface ConsumerProps<T> {
     key?: any;
     ref?: any;
