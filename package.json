@@ -8,8 +8,6 @@
     "lib": "node rollup.config.js"
   },
   "devDependencies": {
-    "@types/react": "^16.9.35",
-    "react": "^16.13.1",
     "preact": "^10.4.5",
     "rollup": "^1.24.0",
     "rollup-plugin-typescript2": "^0.24.3",
